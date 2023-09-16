@@ -29,5 +29,34 @@ int main()
 			printf("Goodbye!\n");
 			break; // Exit the loop (Out of the program)
 		}
+
+		printf("Enter two numbers: ");
+		scanf("%lf %lf", &num1, &num2); // long float to accept two num
+
+		// Check the value it matches
+		switch (choice) {
+			case 1:
+				printf("Results: %.2lf + %.2lf = %.2lf\n", num1, num2, num1 + num2);
+				break;
+			case 2:
+				printf("Results: %.2lf - %.2lf = %.2lf\n", num1, num2, num1 - num2);
+                                break;
+			case 3: 
+				printf("Results: %.2lf * %.2lf = %.2lf\n", num1, num2, num1 * num2);
+                                break;
+			case 4:
+				if (num2 != 0) {
+					printf("Results: %.2lf / %.2lf = %.2lf\n", num1, num2, num1 / num2);
+                                } else {
+					printf("Error: Division by zero \n");
+				}
+				break;
+			default:
+				printf("Invalid choice! Please try again. \n");
+
+		}
 	}
+
+	return 0;
 }
+
